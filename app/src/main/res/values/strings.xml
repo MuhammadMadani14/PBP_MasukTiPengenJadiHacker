@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PBP_MasukTiPengenJadiHacker</string>
+    <string name="welcome_onboard">Welcome Onboard!</string>
+    <string name="football_never_stops">Football Never Stops</string>
+    <string name="deskripsi_splash">Di atas lapangan hijau, kita semua sama. Tak ada perbedaan dalam hasrat untuk mencapai kemenangan</string>
+    <string name="deskripsi_register">Let’s help you meet up your tasks.</string>
+    <string name="enter_your_full_name">Enter Your Full Name</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="enter_your_confirm_password">Enter Your Confirm Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="welcome_back">Welcome Back!</string>
+</resources>

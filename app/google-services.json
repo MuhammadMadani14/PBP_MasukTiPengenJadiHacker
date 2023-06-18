@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1055444467942",
+    "project_id": "pbp-masuktipengenjadihacker",
+    "storage_bucket": "pbp-masuktipengenjadihacker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055444467942:android:44353b86b4fe5e8bfafb27",
+        "android_client_info": {
+          "package_name": "com.example.pbp_masuktipengenjadihacker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055444467942-ge845ipbnv746a3iqa5dln4ccsa9gbgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0iVzZeAAv3lE1u2UUumdBGO8_3Mge20Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055444467942-ge845ipbnv746a3iqa5dln4ccsa9gbgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
