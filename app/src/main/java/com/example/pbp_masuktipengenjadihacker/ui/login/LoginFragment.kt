@@ -12,6 +12,7 @@ import com.example.pbp_masuktipengenjadihacker.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
     lateinit var  binding:FragmentLoginBinding
+
     companion object {
         fun newInstance() = LoginFragment()
     }
@@ -32,6 +33,9 @@ class LoginFragment : Fragment() {
             findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
 
         }
+
+        return inflater.inflate(R.layout.fragment_login, container, false)
     }
+
 
 }
