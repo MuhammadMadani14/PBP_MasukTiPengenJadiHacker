@@ -1,12 +1,12 @@
-package com.example.pbp_masuktipengenjadihacker
+package com.example.pbp_masuktipengenjadihacker.ui.register
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import com.example.pbp_masuktipengenjadihacker.R
 import com.example.pbp_masuktipengenjadihacker.databinding.FragmentRegisterBinding
 
 class RegisterFragment : Fragment() {

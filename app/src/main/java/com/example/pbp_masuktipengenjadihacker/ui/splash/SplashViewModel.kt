@@ -1,4 +1,4 @@
-package com.example.pbp_masuktipengenjadihacker
+package com.example.pbp_masuktipengenjadihacker.ui.splash
 
 import androidx.lifecycle.ViewModel
 

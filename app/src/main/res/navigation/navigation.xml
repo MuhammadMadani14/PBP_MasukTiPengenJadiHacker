@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.pbp_masuktipengenjadihacker.SplashFragment"
+        android:name="com.example.pbp_masuktipengenjadihacker.ui.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.pbp_masuktipengenjadihacker.RegisterFragment"
+        android:name="com.example.pbp_masuktipengenjadihacker.ui.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.pbp_masuktipengenjadihacker.LoginFragment"
+        android:name="com.example.pbp_masuktipengenjadihacker.ui.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
 </navigation>
