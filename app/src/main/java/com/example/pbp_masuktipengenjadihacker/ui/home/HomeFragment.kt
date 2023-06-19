@@ -8,7 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.pbp_masuktipengenjadihacker.R
 
+import com.example.pbp_masuktipengenjadihacker.databinding.FragmentHomeBinding
+import com.example.pbp_masuktipengenjadihacker.ui.bottom_sheet.BottomSheetFragment
+
 class HomeFragment : Fragment() {
+
+    lateinit var binding: FragmentHomeBinding
+
 
     companion object {
         fun newInstance() = HomeFragment()
@@ -20,13 +26,20 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.buttonFloating.setOnClickListener {
+            BottomSheetFragment().show(requireActivity().supportFragmentManager, BottomSheetFragment.uploadToButton)
+        }
+
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
+ 
 
 }
