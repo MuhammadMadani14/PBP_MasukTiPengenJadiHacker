@@ -1,4 +1,4 @@
-package com.example.pbp_masuktipengenjadihacker
+package com.example.pbp_masuktipengenjadihacker.ui.splash
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.pbp_masuktipengenjadihacker.R
 
 class SplashFragment : Fragment() {
 

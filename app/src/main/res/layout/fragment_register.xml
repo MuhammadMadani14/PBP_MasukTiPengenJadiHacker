@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".RegisterFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.register.RegisterFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -102,16 +103,17 @@
 
         </LinearLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ly_1"
             android:layout_centerHorizontal="true"
             android:width="300dp"
-            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/sea_serpent"
             android:fontFamily="@font/poppinsbold"
             android:text="Register"
+            app:cornerRadius="25dp"
             android:textColor="@color/white"
             android:textSize="18sp" />
     </RelativeLayout>
