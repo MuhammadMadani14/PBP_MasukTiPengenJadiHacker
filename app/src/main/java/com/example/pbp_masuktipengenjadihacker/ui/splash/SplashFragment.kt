@@ -1,37 +1,32 @@
 package com.example.pbp_masuktipengenjadihacker.ui.splash
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.example.pbp_masuktipengenjadihacker.R
+import com.example.pbp_masuktipengenjadihacker.databinding.FragmentSplashBinding
 
 class SplashFragment : Fragment() {
+    lateinit var binding : FragmentSplashBinding
+    private val splashVM : SplashViewModel by viewModels()
 
-    companion object {
-        fun newInstance() = SplashFragment()
+    override fun onStart() {
+        super.onStart()
+        Handler(Looper.getMainLooper()).postDelayed({
+            splashVM.currentUser(findNavController())
+        },3000)
     }
-
-    private lateinit var viewModel: SplashViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Handler().postDelayed({
-            findNavController().navigate(R.id.action_splashFragment_to_registerFragment)
-        }, 2000L)
-        return inflater.inflate(R.layout.fragment_splash, container, false)
+        binding = FragmentSplashBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SplashViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
 }
