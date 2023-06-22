@@ -62,6 +62,10 @@ class RegisterFragment : Fragment() {
                 Toast.makeText(requireContext(),it,Toast.LENGTH_SHORT).show()
             }
         }
+        binding.btnBack.setOnClickListener {
+            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+        }
+
 
     }
 

@@ -17,7 +17,7 @@ import com.example.pbp_masuktipengenjadihacker.R
 import com.example.pbp_masuktipengenjadihacker.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
-    lateinit var  binding:FragmentLoginBinding
+
 
     lateinit var binding : FragmentLoginBinding
     private val viewModel : LoginViewModel by viewModels()
@@ -76,13 +76,6 @@ class LoginFragment : Fragment() {
         }
     }
 
-        binding.btn3.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
 
-        }
-
-        return inflater.inflate(R.layout.fragment_login, container, false)
     }
 
-
-}
