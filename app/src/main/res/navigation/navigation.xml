@@ -57,6 +57,10 @@
         android:id="@+id/bottomSheetFragment"
         android:name="com.example.pbp_masuktipengenjadihacker.ui.bottom_sheet.BottomSheetFragment"
         android:label="fragment_bottom_sheet"
-        tools:layout="@layout/fragment_bottom_sheet" />
+        tools:layout="@layout/fragment_bottom_sheet" >
+        <action
+            android:id="@+id/action_bottomSheetFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </dialog>
 
 </navigation>
