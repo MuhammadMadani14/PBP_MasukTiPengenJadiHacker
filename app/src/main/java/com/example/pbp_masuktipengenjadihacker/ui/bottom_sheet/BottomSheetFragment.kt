@@ -96,7 +96,7 @@ class BottomSheetFragment :BottomSheetDialogFragment() {
                 val namaTeam = nameTeam.text.toString().trim()
                 val jadwal = jadwal.text.toString().trim()
                 val squadList = squadlist.text.toString().trim()
-                val statistikPemain = statistik.toString().trim()
+                val statistikPemain = statistik.text.toString().trim()
                 if (filePath != null && namaTeam.isNotEmpty() && jadwal.isNotEmpty() && squadList.isNotEmpty() && statistikPemain.isNotEmpty()){
                     val ref = firebaseReference?.child("uploads/"+ UUID.randomUUID().toString())
                     val uploadTask = ref?.putFile(filePath!!)
@@ -121,15 +121,16 @@ class BottomSheetFragment :BottomSheetDialogFragment() {
                                 .add(dataTeam)
                                 .addOnSuccessListener {
 //                                    Toast.makeText(requireContext(),"Success Upload",Toast.LENGTH_SHORT).show()
-                                    findNavController().navigate(R.id.action_bottomSheetFragment_to_homeFragment)
+                                    findNavController().navigate(R.id.homeFragment)
+                                    dismiss()
                                 }.addOnFailureListener {
-                                    Toast.makeText(requireContext(),"Failed Upload",Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(requireContext(),it.message.toString(),Toast.LENGTH_SHORT).show()
                                 }
                         }else{
                             Toast.makeText(requireContext(),"Error",Toast.LENGTH_SHORT).show()
                         }
                     }?.addOnFailureListener {
-                        Toast.makeText(requireContext(),"Error",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(),it.message.toString(),Toast.LENGTH_SHORT).show()
                     }
                 }else{
                     Toast.makeText(requireContext(),"Error",Toast.LENGTH_SHORT).show()

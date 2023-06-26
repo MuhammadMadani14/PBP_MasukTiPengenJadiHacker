@@ -26,6 +26,11 @@ class ScheduleAdapter(private val listSchedule: List<DataTeam>): RecyclerView.Ad
         @SuppressLint("MissingInflatedId")
         fun bind(item: DataTeam) {
             binding.apply {
+                Glide.with(itemView.context).load(item.image).into(ivItem)
+                setTeamHome.text = item.nama_team.toString()
+                setTanggal.text = item.jadwal.toString()
+                setStatistik.text = item.statistik_pemain.toString()
+                setSquadlist.text = item.squad_list.toString()
                 root.setOnClickListener {
                     val content = LayoutInflater.from(
                         itemView.context
@@ -35,11 +40,7 @@ class ScheduleAdapter(private val listSchedule: List<DataTeam>): RecyclerView.Ad
                     val tanggal = content.findViewById<MaterialTextView>(R.id.setTanggal)
                     val statistik = content.findViewById<MaterialTextView>(R.id.setStatistik)
                     val squadList = content.findViewById<MaterialTextView>(R.id.setSquadlist)
-                    Glide.with(itemView.context).load(item.image).into(img)
-                    nameTeam.text = item.nama_tim.toString()
-                    tanggal.text = item.jadwal.toString()
-                    statistik.text = item.statistik_pemain.toString()
-                    squadList.text = item.squad_list.toString()
+
                     MaterialAlertDialogBuilder(itemView.context).setView(
                         content
                     ).show()
