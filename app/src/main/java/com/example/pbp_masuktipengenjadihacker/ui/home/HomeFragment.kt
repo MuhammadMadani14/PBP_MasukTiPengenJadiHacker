@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
     private var auth : FirebaseAuth = Firebase.auth
     private val db = FirebaseFirestore.getInstance()
     private lateinit var dataTeam :ArrayList<DataTeam>
-    private lateinit var docs : ArrayList<String>
+    val docs : ArrayList<String> = arrayListOf()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,6 +59,7 @@ class HomeFragment : Fragment() {
                     for (data in it.documents) {
                         docs.add(it.documents[i].id)
                         val team = data.toObject(DataTeam::class.java)
+                        Log.i("test",team?.jadwal.toString())
                         if (team != null) {
                             dataTeam.add(team)
                             i++
