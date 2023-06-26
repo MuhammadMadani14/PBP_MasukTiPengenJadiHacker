@@ -11,23 +11,5 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.toObject
 
 class HomeViewModel : ViewModel() {
-    val firestore = FirebaseFirestore.getInstance()
-    private var _schedule = MutableLiveData<List<DataTeam>>()
-    val schedule: LiveData<List<DataTeam>> get() = _schedule
-    private val dataList = mutableListOf<DataTeam>()
 
-    fun getData() {
-        firestore.collection("team")
-            .get()
-            .addOnSuccessListener {
-                if (it.isEmpty) {
-                    Log.d("error", "No Data Found")
-                }
-                for (doc in it) {
-                    val taskModel = doc.toObject(DataTeam::class.java)
-                    dataList.add(taskModel)
-                }
-                _schedule.postValue(dataList)
-            }
-    }
 }
