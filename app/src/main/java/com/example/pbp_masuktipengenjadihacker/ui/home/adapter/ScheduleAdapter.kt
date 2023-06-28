@@ -31,20 +31,7 @@ class ScheduleAdapter(private val listSchedule: List<DataTeam>): RecyclerView.Ad
                 setTanggal.text = item.jadwal.toString()
                 setStatistik.text = item.statistik_pemain.toString()
                 setSquadlist.text = item.squad_list.toString()
-                root.setOnClickListener {
-                    val content = LayoutInflater.from(
-                        itemView.context
-                    ).inflate(R.layout.custom_view, null)
-                    val img = content.findViewById<ImageView>(R.id.ivItem)
-                    val nameTeam = content.findViewById<MaterialTextView>(R.id.setTeamHome)
-                    val tanggal = content.findViewById<MaterialTextView>(R.id.setTanggal)
-                    val statistik = content.findViewById<MaterialTextView>(R.id.setStatistik)
-                    val squadList = content.findViewById<MaterialTextView>(R.id.setSquadlist)
 
-                    MaterialAlertDialogBuilder(itemView.context).setView(
-                        content
-                    ).show()
-                }
                 }
             }
         }
